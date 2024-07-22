@@ -1,13 +1,18 @@
 <template>
   <div>
-    <h1>hi</h1>
+    <WhatThe />
   </div>
 </template>
 
+
 <script setup>
+import 'aframe'
+import ObjectThing from '../components/ObjectThing.vue'
+import WhatThe from '../components/WhatThe.vue'
 
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
+
 
 </style>
