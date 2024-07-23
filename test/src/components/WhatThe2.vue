@@ -58,7 +58,7 @@
           position="0 0 -1" 
           geometry="primitive: ring; radiusInner: 0.001; radiusOuter: 0.004" 
           material="color: black; shader: flat"
-          raycaster="far: 10; interval: 1000; objects: .clickable ">
+          raycaster="far: 5; interval: 1000; objects: .clickable ">
         </a-entity>
         </a-camera>
     </a-scene>
