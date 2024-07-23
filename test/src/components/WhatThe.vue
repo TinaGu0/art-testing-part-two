@@ -1,16 +1,21 @@
 <template>
-    <a-scene>
+    <a-scene webxr="optionalFeatures: hit-test;" ar-hit-test="target:#model">
         <a-entity
           id="model"
           gltf-model="url(/sky.glb)"
           scale="0.5, 0.5, 0.5"
-          rotation="0 -90 0" 
-          position="0 0 -4"
-          animation__mouseenter="property: scale; to: 2.3 2.3 2.3; dur: 300; startEvents: mouseenter"
+          rotation="0 180 0" 
+          position="9 0 -4"
+          animation__click="property: rotation; to: 0 180 0; loop: true; dur: 10000;"
+          animation__mouseenter="property: scale; to: 0.7 0.7 0.7; dur: 300; startEvents: mouseenter"
+          animation__mouseleave="property: scale; to: 0.5, 0.5, 0.5; dur: 300; startEvents: mouseleave"
         ></a-entity>
-        <a-cylinder position="0 0 0" rotation="0 0 0" color="#FFF"></a-cylinder>
-        <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#43C877"></a-plane>
+        <a-box position="9 -1 -4" rotation="-90 0 0" width="4" height="4" color="#FFF"></a-box>
+        <a-plane position="0 -1 0" rotation="-90 0 0" width="100"height=100 color="#A4E28A"></a-plane>
         <a-sky color="#53adbd"></a-sky>
+        <a-camera>
+          <a-entity cursor="fuse:true; fuseTimeout:500" position="0 0 -1" geometry="primitive: ring; radiusInner: 0.001; radiusOuter: 0.004" material="color: black; shader: flat"></a-entity>
+        </a-camera>
     </a-scene>
 </template>
 
