@@ -9,6 +9,7 @@ import HelloWorld from './components/HelloWorld.vue'
       <nav>
         <RouterLink to="/">About</RouterLink>
         <RouterLink to="/home">Home</RouterLink>
+        <RouterLink to="/ar">AR</RouterLink>
       </nav>
     </div>
   </header>
@@ -33,6 +34,8 @@ nav {
   text-align: center;
   margin-top: 2rem;
   position: absolute;
+  align-items: center;
+  display: flex;
 }
 
 nav a.router-link-exact-active {

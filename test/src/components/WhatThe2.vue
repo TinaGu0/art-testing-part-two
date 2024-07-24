@@ -1,7 +1,9 @@
 <template>
+    <div class="viewport">
     <a-scene webxr="optionalFeatures: hit-test;" 
     ar-hit-test="target:#model"
-    fog="type: linear; color: #FFF" id="scene">
+    fog="type: linear; color: #FFF" id="scene"
+    embedded>
         <a-entity
           id="model"
           gltf-model="url(/sky.glb)"
@@ -62,6 +64,7 @@
         </a-entity>
         </a-camera>
     </a-scene>
+</div>
 </template>
 
 <script setup>
@@ -85,9 +88,16 @@ function redirect() {
 </script>
 
 <style scoped>
-#scene {
-    width: 80%;
+.viewport {
+    margin-top: 30vw;
+    width: 100%;
     height: 60%;
+    align-items: center;
+}
+
+a-scene {
+    height: 300px;
+    width: 600px;
 }
 
 </style>
