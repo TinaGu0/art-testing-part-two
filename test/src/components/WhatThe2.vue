@@ -33,6 +33,7 @@
             :visible= visibility
             geometry="primitive:plane;"
             class="clickable"
+            id="skyModel"
             @click="redirect()">
         </a-text>
         <a-text
@@ -42,8 +43,8 @@
             scale="2 2 2"
             :visible= visibility
             class="clickable"
-            @click="a()"
             geometry="primitive:plane;"
+            @click="a()"
             >
         </a-text>
         <a-box position="7 -0.7 -4" 
@@ -82,7 +83,8 @@ function a() {
 };
 
 function redirect() {
-    console.log("what")
+    console.log("activated")
+    window.location.href = "ar"
 }
 
 </script>
@@ -97,7 +99,7 @@ function redirect() {
 
 a-scene {
     height: 300px;
-    width: 600px;
+    width: 400px;
 }
 
 </style>
