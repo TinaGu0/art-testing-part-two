@@ -20,14 +20,10 @@
             </a-entity>
             <a-camera gps-new-camera></a-camera>
         </a-scene> -->
-        <a-scene
-        vr-mode-ui="enabled: false"
-        embedded
-        arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false;'
-        renderer='antialias: true; alpha: true'>
-            <a-camera gps-new-camera rotation-reader></a-camera>
-            <a-box gps-new-entity-place='latitude: 40.5682389; longitude: -74.1167163' color='red' scale='20 20 20'></a-box>
-        </a-scene>
+    <a-scene vr-mode-ui='enabled: false' arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' renderer='antialias: true; alpha: true'>
+        <a-camera gps-new-camera='gpsMinDistance: 5'></a-camera>
+        <a-entity material='color: red' geometry='primitive: box' gps-new-entity-place="latitude: 40.568; longitude: -74.116" scale="10 10 10"></a-entity>
+    </a-scene>
     </div>
 </template>
 
@@ -39,6 +35,8 @@ import { ref } from 'vue'
 const model = ref("")
 
 model.value = "url(/sky.glb)"
+
+//latitude: 40.5682389; longitude: -74.1167163
 
 //latLonToWorld(lat, lon)
 //console.log(lat, lon)
