@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="div">
 
   </div>
 </template>
@@ -15,7 +15,7 @@ const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.inner
 
 const renderer = new THREE.WebGLRenderer();
 renderer.setSize( window.innerWidth, window.innerHeight );
-document.body.appendChild( renderer.domElement );
+document.body.appendChild( renderer.div );
 
 const geometry = new THREE.BoxGeometry( 1, 1, 1 );
 const material = new THREE.MeshBasicMaterial( { color: "#FFF" } );
