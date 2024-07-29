@@ -2,13 +2,14 @@
     <div>
       <a-scene
         vr-mode-ui="enabled: false"
-        arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false"
-        renderer="antialias: true; alpha: true"
+        arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: true"
+        renderer="antialias: true; alpha: false"
+        webxr="optionalFeatures: hit-test;"
+        embedded
       >
         <a-entity
           material="color: red"
           geometry="primitive: box"
-          gps-new-entity-place="latitude: 40.5682389; longitude: -74.1167163"
           scale="10 10 10"
         ></a-entity>
         <a-entity
@@ -18,8 +19,6 @@
           gesture-handler="factor: 10;"
           scale="0.5 0.5 0.5"
           rotation="-90 0 0"
-          animation="property: rotation; to: 0 0 0; loop: true; dur: 10000"
-          gps-new-entity-place="latitude: 40.5682389; longitude: -74.1167163"
         ></a-entity>
         <a-camera gps-new-camera="gpsMinDistance: 5" rotation-reader></a-camera>
       </a-scene>
@@ -28,13 +27,15 @@
 
 <script setup >
 import 'aframe'
-import '@ar-js-org/ar.js'
+//import '@ar-js-org/ar.js'
 import { ref } from 'vue'
+
 
 const model = ref("")
 
 model.value = "url(/sky.glb)"
 
+//gps-new-entity-place="latitude: 40.5682389; longitude: -74.1167163"
 //latitude: 40.5682389; longitude: -74.1167163
 
 //latLonToWorld(lat, lon)
