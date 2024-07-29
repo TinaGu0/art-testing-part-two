@@ -20,7 +20,7 @@
           :gltf-model="model"
           gesture-handler="factor: 10;"
           scale="0.5 0.5 0.5"
-          rotation="-90 0 0"
+          rotation="180 0 180"
           gps-new-entity-place="latitude: 40.5682389; longitude: -74.1167163"
         ></a-entity>
       </a-scene>
@@ -29,7 +29,7 @@
 
 <script setup >
 import 'aframe'
-import 'ar.js'
+//import 'ar.js'
 //import '@ar-js-org/ar.js'
 import { ref } from 'vue'
 

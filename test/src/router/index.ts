@@ -32,6 +32,12 @@ const router = createRouter({
       name: 'what',
       component: () => import('../components/WhatThe.vue')
     },
+    {
+      path: '/what2',
+      name: 'what2',
+      //@ts-ignore
+      component: () => import('../components/WhatThe2.vue')
+    },
   ]
 })
 
