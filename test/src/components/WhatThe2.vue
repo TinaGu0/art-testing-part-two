@@ -102,4 +102,8 @@ a-scene {
     width: 400px;
 }
 
+body {
+    background-color: var(--poopy);
+}
+
 </style>
