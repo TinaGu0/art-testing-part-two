@@ -5,7 +5,6 @@
         arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false"
         renderer="antialias: true; alpha: true"
       >
-        <a-camera gps-new-camera="gpsMinDistance: 5"></a-camera>
         <a-entity
           material="color: red"
           geometry="primitive: box"
@@ -22,6 +21,7 @@
           animation="property: rotation; to: 0 0 0; loop: true; dur: 10000"
           gps-new-entity-place="latitude: 40.5682389; longitude: -74.1167163"
         ></a-entity>
+        <a-camera gps-new-camera="gpsMinDistance: 5" rotation-reader></a-camera>
       </a-scene>
     </div>
   </template>
